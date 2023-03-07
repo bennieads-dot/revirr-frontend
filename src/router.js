@@ -3,7 +3,7 @@ import Home from './pages/Home.vue'
 import SignIn from './pages/SignIn.vue'
 import PostAJob from './pages/PostAJob.vue'
 import JobPost from './pages/JobPost.vue'
-import Jobs from './pages/jobs.vue'
+import Jobs from './pages/Jobs.vue'
 
 const routerHistory = createWebHistory()
 
