@@ -1,9 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from './pages/Home.vue'
-import SignIn from './pages/SignIn.vue'
-import PostAJob from './pages/PostAJob.vue'
-import JobPost from './pages/JobPost.vue'
-import Jobs from './pages/Jobs.vue'
+import UnderConstruction from './pages/UnderConstruction.vue'
 
 const routerHistory = createWebHistory()
 
@@ -21,27 +17,11 @@ const router = createRouter({
   routes: [
     {
       path: '',
-      component: Home
+      component: UnderConstruction
     },
     {
       path: '/',
-      component: Home
-    },
-    {
-      path: '/signin',
-      component: SignIn
-    },
-    {
-      path: '/post-a-job',
-      component: PostAJob
-    },    
-    {
-      path: '/job-post',
-      component: JobPost
-    },
-    {
-      path: '/jobs',
-      component: Jobs
+      component: UnderConstruction
     }
   ]
 })
