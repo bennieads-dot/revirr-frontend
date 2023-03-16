@@ -8,6 +8,7 @@
     <main class="max-w-6xl mx-auto px-4 sm:px-6 mb-auto">
 
       <TextHeader />
+      <SearchBar />
 
     </main>
 
@@ -24,6 +25,7 @@ import Sidebar from '../partials/Sidebar.vue'
 import JobList from '../partials/JobList.vue'
 import Testimonials from '../partials/Testimonials.vue'
 import Footer from '../partials/Footer.vue'
+import SearchBar from '../partials/SearchBar.vue'
 
 export default {
   name: 'Home',
@@ -34,6 +36,7 @@ export default {
     JobList,
     Testimonials,
     Footer,
+    SearchBar
   },
   data() {
     return {
