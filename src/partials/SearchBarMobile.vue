@@ -19,7 +19,7 @@
       </div>
       <button type="button" id="search"
         class="inline-block h-12 px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-transparent active:bg-blue-800 active:shadow-lg ease-in-out"
-        data-mdb-ripple="true" data-mdb-ripple-color="light" @click='validateSearch' @keyup.enter="validateSearch">search
+        data-mdb-ripple="true" data-mdb-ripple-color="light" @click='validateSearch' @keyup.enter='validateSearch'>search
       </button>
     </form>
   </div>
@@ -43,20 +43,18 @@ export default {
   methods: {
     validateSearch() {
       // Handle form submission here
-      console.log(this.keyword.text)
-      this.keyword.invalid = this.keyword.text === "" ? true : false;
-      this.location.invalid = this.location.text == "" ? true : false;
-      if (!this.keyword.invalid && !this.location.invalid) {
-        this.search();
+      if (!this.keyword.text) {
+        this.keyword.invalid = true
+      } else if (!this.location.text) {
+        this.location.invalid = true;
+      } else {
+        this.$router.push({ path: 'jobs', query: { keyword: this.keyword.text, location: this.location.text } })
       }
-    },
-    search() {
-      this.$router.push({ path: 'jobs', query: { keyword: this.keyword.text, location: this.location.text } })
     }
   },
-  created() {
-    this.keyword.text = this.$route.query.keyword ? this.$route.query.keyword : '';
-    this.location.text = this.$route.query.location ? this.$route.query.location : '';
-  }
+  beforeMount() {
+    this.keyword.text = router.query.keyword ? router.query.keyword : '';
+    this.location.text = $router.query.location ? router.query.location : '';
+  },
 }
 </script>
