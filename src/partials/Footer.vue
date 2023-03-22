@@ -25,7 +25,7 @@
           </div>
 
           <!-- Copyright -->
-          <div class="text-sm text-gray-500">entryfindr.com | All rights reserved</div>
+          <div class="text-sm text-gray-500">revirr.com | All rights reserved</div>
 
         </div>
 
