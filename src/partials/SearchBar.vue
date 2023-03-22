@@ -4,7 +4,7 @@
       <div class="flex flex-col md:basis-5/6">
         <input type="text"
           class="form-control px-4 py-2 mb-2 md:mb-0 md:mr-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded m-0 focus:text-gray-700 focus:bg-white focus:border-slate-200 focus:outline-none focus:ring-transparent"
-          :class="{ 'invalid': true }" placeholder="job title, keyword, skill..." v-model="keyword.text">
+          placeholder="job title, keyword, skill..." v-model="keyword.text" @keyup.enter="validateSearch">
         <span v-if='keyword.invalid' class="text-red-600 text-sm mb-2">
           Keyword required
         </span>
@@ -12,8 +12,8 @@
       <div class="flex flex-col md:basis-1/2">
         <input type="text"
           class="form-control px-4 py-2 mb-2 md:mb-0 md:mr-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded m-0 focus:text-gray-700 focus:bg-white focus:border-slate-200 focus:outline-none focus:ring-transparent"
-          v-model="location.text" placeholder="city, state, zip...">
-        <span v-if='keyword.invalid' class="text-red-600 text-sm mb-2">
+          placeholder="city, state, zip..." v-model="location.text" @keyup.enter="validateSearch">
+        <span v-if='location.invalid' class="text-red-600 text-sm mb-2">
           Location required
         </span>
       </div>
@@ -42,10 +42,10 @@ export default {
   },
   methods: {
     validateSearch() {
-      // Handle form submission here
       console.log(this.keyword.text)
+      console.log(this.location.text)
       this.keyword.invalid = this.keyword.text === "" ? true : false;
-      this.location.invalid = this.location.text == "" ? true : false;
+      this.location.invalid = this.location.text === "" ? true : false;
       if (!this.keyword.invalid && !this.location.invalid) {
         this.search();
       }
