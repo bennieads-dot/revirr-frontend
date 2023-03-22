@@ -1,5 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import UnderConstruction from './pages/UnderConstruction.vue'
+import Home from './pages/Home.vue'
+import SignIn from './pages/SignIn.vue'
+import PostAJob from './pages/PostAJob.vue'
+import JobPost from './pages/JobPost.vue'
+import Jobs from './pages/Jobs.vue'
 
 const routerHistory = createWebHistory()
 
@@ -17,13 +21,28 @@ const router = createRouter({
   routes: [
     {
       path: '',
-      component: UnderConstruction
+      component: Home
     },
     {
       path: '/',
-      component: UnderConstruction
+      component: Home
+    },
+    {
+      path: '/signin',
+      component: SignIn
+    },
+    {
+      path: '/post-a-job',
+      component: PostAJob
+    },
+    {
+      path: '/job-post',
+      component: JobPost
+    },
+    {
+      path: '/jobs',
+      component: Jobs
     }
   ]
 })
-
 export default router
