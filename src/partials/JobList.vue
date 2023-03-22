@@ -5,11 +5,7 @@
     <div class="flex flex-col">
 
       <!-- Items -->
-      <JobItem
-        v-for="item in items"
-        :key="item.id"
-        :item="item"
-      />
+      <JobItem v-for="item in items" :key="item.id" :item="item" />
 
       <!-- Newletter CTA -->
       <div class="py-8 border-b border-gray-200 -order-1">
@@ -43,6 +39,7 @@ export default {
   components: {
     JobItem,
     Newsletter,
+
   },
   setup() {
 
@@ -68,7 +65,7 @@ export default {
         tag1: 'Full Time',
         tag2: '🌎 Remote',
         date: '2h'
-      },  
+      },
       {
         id: 2,
         sticky: false,
@@ -79,7 +76,7 @@ export default {
         tag1: 'Full Time',
         tag2: '🌎 Remote',
         date: '2h'
-      },  
+      },
       {
         id: 3,
         sticky: false,
@@ -90,7 +87,7 @@ export default {
         tag1: '$100K - $170K',
         tag2: '🇺🇸 NYC',
         date: '4h'
-      },  
+      },
       {
         id: 4,
         sticky: false,
@@ -101,7 +98,7 @@ export default {
         tag1: '$100K - $170K',
         tag2: '🇺🇸 NYC',
         date: '7h'
-      },                        
+      },
       {
         id: 5,
         sticky: false,
@@ -112,7 +109,7 @@ export default {
         tag1: 'Contract',
         tag2: '🇬🇧 London, UK',
         date: '12h'
-      },        
+      },
       {
         id: 6,
         sticky: false,
@@ -123,7 +120,7 @@ export default {
         tag1: 'Full Time',
         tag2: '🌎 Remote',
         date: '12h'
-      },  
+      },
       {
         id: 7,
         sticky: false,
@@ -134,7 +131,7 @@ export default {
         tag1: 'Full Time',
         tag2: '🇮🇹 Milan, IT',
         date: '20h'
-      },  
+      },
       {
         id: 8,
         sticky: false,
@@ -145,7 +142,7 @@ export default {
         tag1: 'Full Time',
         tag2: '🌎 Remote',
         date: '1d'
-      },  
+      },
       {
         id: 9,
         sticky: false,
@@ -156,7 +153,7 @@ export default {
         tag1: '$55K - $100K',
         tag2: '🌎 Remote',
         date: '1d'
-      },  
+      },
       {
         id: 10,
         sticky: false,
@@ -167,7 +164,7 @@ export default {
         tag1: 'Full Time',
         tag2: '🌎 Remote',
         date: '2d'
-      },                                
+      },
       {
         id: 11,
         sticky: false,
@@ -178,7 +175,7 @@ export default {
         tag1: 'Full Time',
         tag2: '🌎 Remote',
         date: '2d'
-      },        
+      },
       {
         id: 12,
         sticky: false,
@@ -189,7 +186,7 @@ export default {
         tag1: 'Full Time',
         tag2: '🌎 Remote',
         date: '2d'
-      },        
+      },
       {
         id: 13,
         sticky: false,
@@ -200,7 +197,7 @@ export default {
         tag1: 'Full Time',
         tag2: '🌎 Remote',
         date: '2d'
-      },  
+      },
       {
         id: 14,
         sticky: false,
@@ -216,7 +213,7 @@ export default {
 
     return {
       items,
-    }  
-  }  
+    }
+  }
 }
 </script>

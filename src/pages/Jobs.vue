@@ -10,6 +10,9 @@
       <!-- Page content -->
       <section>
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div>
+            <SearchBar />
+          </div>
           <div class="py-8 md:py-16">
             <div class="md:flex md:justify-between" data-sticky-container>
 
@@ -38,6 +41,7 @@
 <script>
 import Header from '../partials/Header.vue'
 import Sidebar from '../partials/Sidebar.vue'
+import SearchBar from '../partials/SearchBar.vue'
 import JobList from '../partials/JobList.vue'
 import Footer from '../partials/Footer.vue'
 
@@ -46,6 +50,7 @@ export default {
   components: {
     Header,
     Sidebar,
+    SearchBar,
     JobList,
     Footer,
   },
