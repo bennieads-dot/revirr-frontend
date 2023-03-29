@@ -18,7 +18,7 @@
         </span>
       </div>
       <button type="button" id="search"
-        class="inline-block h-12 px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-transparent active:bg-blue-800 active:shadow-lg ease-in-out"
+        class="inline-block h-12 px-7 py-3 text-white font-medium text-sm leading-snug rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-transparent active:bg-blue-800 active:shadow-lg ease-in-out"
         data-mdb-ripple="true" data-mdb-ripple-color="light" @click='validateSearch' @keyup.enter="validateSearch">search
       </button>
     </form>
@@ -42,16 +42,14 @@ export default {
   },
   methods: {
     validateSearch() {
-      console.log(this.keyword.text)
-      console.log(this.location.text)
       this.keyword.invalid = this.keyword.text === "" ? true : false;
       this.location.invalid = this.location.text === "" ? true : false;
       if (!this.keyword.invalid && !this.location.invalid) {
-        this.search();
+        this.search(this.keyword.text, this.location.text);
       }
     },
-    search() {
-      this.$router.push({ path: 'jobs', query: { keyword: this.keyword.text, location: this.location.text } })
+    search(keyword, location) {
+      this.$router.push({ path: 'jobs', query: { keyword: keyword, location: location } })
     }
   },
   created() {

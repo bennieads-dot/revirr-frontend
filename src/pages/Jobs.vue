@@ -10,8 +10,9 @@
       <!-- Page content -->
       <section>
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
-          <div>
-            <SearchBar />
+          <div class="border-t border-gray-300">
+            <SearchBar class="pt-4" />
+            <Filters />
           </div>
           <div class="py-8 md:py-16">
             <div class="md:flex md:justify-between" data-sticky-container>
@@ -44,6 +45,7 @@ import Sidebar from '../partials/Sidebar.vue'
 import SearchBar from '../partials/SearchBar.vue'
 import JobList from '../partials/JobList.vue'
 import Footer from '../partials/Footer.vue'
+import Filters from '../partials/Filters.vue'
 
 export default {
   name: 'Jobs',
@@ -53,6 +55,7 @@ export default {
     SearchBar,
     JobList,
     Footer,
+    Filters,
   },
 }
 </script>

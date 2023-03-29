@@ -17,14 +17,12 @@
 
           <!-- Desktop sign in links -->
           <ul class="flex grow justify-end flex-wrap items-center">
+            <!-- font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-transparent active:bg-blue-800 active:shadow-lg ease-in-out -->
             <li class="ml-3">
-              <router-link class="btn-sm text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-sm" id="signin"
-                to="/post-a-job">sign in</router-link>
+              <router-link id="signin" class="btn text-white shadow-sm" to="/signin">sign in</router-link>
             </li>
           </ul>
-
         </nav>
-
       </div>
     </div>
   </header>
